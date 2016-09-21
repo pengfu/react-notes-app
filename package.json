@@ -1,0 +1,32 @@
+{
+  "name": "mobx-react-cli",
+  "version": "1.0.0",
+  "description": "react-cli",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZC828/mobx-react-cli.git"
+  },
+  "keywords": [
+    "react-cli"
+  ],
+  "bin": {
+    "mobx-react-cli": "./bin/index.js"
+  },
+  "preferGlobal": true,
+  "author": "zhangchao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZC828/mobx-react-cli/issues"
+  },
+  "homepage": "https://github.com/ZC828/mobx-react-cli#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "commander": "^2.9.0",
+    "download-git-repo": "^0.1.2",
+    "fs-extra": "^0.30.0",
+    "ora": "^0.2.3"
+  }
+}
