@@ -1,32 +1,72 @@
 {
-  "name": "mobx-react-cli",
+  "name": "react-notes-app",
   "version": "1.0.0",
-  "description": "react-cli",
+  "description": "app",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "clean_node_module": "rimraf node_modules",
+    "start": "node devServer.js",
+    "build:webpack": "webpack --progress --colors --config webpack/webpack.config.prod.js",
+    "build": "set NODE_ENV=production&& npm run clean && npm run build:webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZC828/mobx-react-cli.git"
+    "url": ""
   },
   "keywords": [
-    "react-cli"
+    "react"
   ],
-  "bin": {
-    "mobx-react-cli": "./bin/index.js"
-  },
-  "preferGlobal": true,
-  "author": "zhangchao",
-  "license": "ISC",
+  "author": "",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ZC828/mobx-react-cli/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/ZC828/mobx-react-cli#readme",
+  "homepage": "",
   "dependencies": {
-    "bluebird": "^3.4.1",
-    "commander": "^2.9.0",
-    "download-git-repo": "^0.1.2",
-    "fs-extra": "^0.30.0",
-    "ora": "^0.2.3"
+    "classnames": "^2.2.5",
+    "isomorphic-fetch": "^2.2.1",
+    "mobx": "^2.4.2",
+    "mobx-react": "^3.5.4",
+    "normalize.css": "^4.2.0",
+    "pure-render-decorator": "^1.1.1",
+    "react": "^15.3.1",
+    "react-css-modules": "^3.7.6",
+    "react-dom": "^15.3.1",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^6.1.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-antd": "^0.4.0",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "cssnano": "^3.7.0",
+    "eslint": "^3.0.1",
+    "eslint-loader": "^1.4.1",
+    "eslint-plugin-react": "^5.2.2",
+    "express": "^4.13.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "http-proxy-middleware": "^0.15.2",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
+    "react-images": "^0.5.1",
+    "rimraf": "^2.5.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
   }
 }

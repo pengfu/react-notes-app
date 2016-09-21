@@ -1,7 +1,7 @@
 var path = require('path')
 module.exports={
     entrys:{
-        app:path.join(__dirname,'/app/')
+        app:path.join(__dirname,'/components/')
     },
     outputPath:path.join(__dirname,'/dist/'),
     publicPath:'/dist/',
