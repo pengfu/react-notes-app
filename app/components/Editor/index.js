@@ -7,7 +7,10 @@ export default class extends Component{
 
     render(){
         return(
-            <div>edrtyt</div>
+            <div id="note-editor">
+                <textarea className="form-control">
+                </textarea>
+            </div>
         )
     }
 }
