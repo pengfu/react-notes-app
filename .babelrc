@@ -6,8 +6,7 @@
   ],
   "plugins": [
     "transform-decorators-legacy",
-    "transform-class-properties",
-    ["antd",{"style":"css"}]
+    "transform-class-properties"
   ],
   "env": {
     "development": {
