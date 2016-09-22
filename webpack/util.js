@@ -1,9 +1,8 @@
 var path=require('path'),
-    polyfill=require('../config').babel_polyfill,
+    polyfill=require('../config').babel_polyfill||false,
     vendors=require('./vendors'),
-    port=require('../config').port||3000,
-    nodeModulesPath=path.resolve(__dirname, '..','node_modules');
-var util = {
+    nodeModulesPath=path.resolve(__dirname, '..','node_modules')
+module.exports = {
     isDev:process.env.NODE_ENV!=='production',
     pushPlugins: function (plugins, newPlugins) {
         var len = newPlugins.length
@@ -54,11 +53,9 @@ var util = {
         return entrys
     },
     noParse:[
-        path.resolve(nodeModulesPath,'react/dist/react.js'),
-        path.resolve(nodeModulesPath,'react-dom/dist/react-dom.js'),
-        path.resolve(nodeModulesPath,'redux/dist/redux.js'),
-        path.resolve(nodeModulesPath,'react-router/umd/ReactRouter.js'),
-        path.resolve(nodeModulesPath,'classnames/index.js')
+        path.resolve(nodeModulesPath, 'react/dist/react.js'),
+        path.resolve(nodeModulesPath, 'react-dom/dist/react-dom.js'),
+        path.resolve(nodeModulesPath, 'react-router/umd/ReactRouter.js'),
+        path.resolve(nodeModulesPath, 'classnames/index.js'),
     ]
 }
-module.exports=util

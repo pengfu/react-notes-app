@@ -18,12 +18,16 @@ var baceConfig = {
     },
     postcss: [
         require('precss')(),
+        require('postcss-import'),
+        /*
+        可以配置'ie 6-8'或者'> 1%'或者'last 2 versions'
+         */
+        require('autoprefixer')({ browsers: ['last 2 versions'] }),
         require('cssnano')(),
-        require('autoprefixer')({browsers: ['last 2 versions']})
         // require('postcss-pxtorem')(util.pxToRemOptions(75))
     ],
     resolve: {
-        extensions: ['', '.js', '.scss', '.css', '.jsx','.ts','.tsx']
+        extensions: ['', '.js','.less','.scss', '.css', '.jsx','.ts','.tsx','.es6']
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({

@@ -8,11 +8,13 @@ util.pushPlugins(plugins,[
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': '"production"',
         __DEV__:false,
-        __TAP__:config.touchTap
+        __polyfill__:config.babel_polyfill||false
     }),
     new webpack.optimize.UglifyJsPlugin({
         compress: {
-            warnings: false
+            warnings: false,
+            drop_console:true,
+            drop_debugger:true
         }
     }),
     //去除重复引用的模块代码,避免在最终生成的文件中出现重复的模块

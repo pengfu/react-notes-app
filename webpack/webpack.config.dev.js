@@ -9,9 +9,9 @@ util.pushPlugins(plugins,[
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': '"development"',
         __DEV__:true,
-        __TAP__:config.touchTap
+        __polyfill__:config.babel_polyfill||false
     })
 ])
-//cheap-source-map比较快
-webpackConfig.devtool='cheap-source-map'//#eval-source-map
+//cheap-source-map
+webpackConfig.devtool='#eval-source-map'//#eval-source-map
 module.exports=webpackConfig

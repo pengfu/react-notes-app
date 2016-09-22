@@ -7,13 +7,17 @@ module.exports=[{
     include:appPath,
     loader: 'babel?cacheDirectory=true'
 },{
-    test: /\.tsx?$/,
-    include:appPath,
-    loader: 'ts'
+    test: /\.css$/,
+    include:[
+        path.join(projectRootPath,'assets/css/'),
+        path.join(appPath,'style/')
+    ],
+    exclude:path.join(appPath,'style/antd/'),
+    loader:  ExtractTextPlugin.extract("style", "css?sourceMap!postcss")
 },{
     test: /\.css$/,
-    include:path.join(projectRootPath,'assets/css/'),
-    loader:  ExtractTextPlugin.extract("style", "css?sourceMap!postcss")
+    include: path.join(appPath,'style/antd/'),
+    loader: 'style!css!postcss'
 },{
     test: /\.css$/,
     include:appPath,
@@ -21,17 +25,13 @@ module.exports=[{
     loader: "style!css?module&localIdentName=[name]__[local]___[hash:base64:5]!postcss"
 },{
     test: /\.css$/,
-    include: path.join(appPath,'style'),
-    loader: 'style!css'
-},{
-    test: /\.css$/,
     include: /node_modules/,
-    loader: 'style!css'
+    loader: 'style!css!postcss'
 },{
     test: /\.(png|jpe?g|gif)$/,
     loader: 'url',
     query: {
-        limit: 5000,
+        limit: 500,
         name: '[hash:5].[name].[ext]'
     }
 },{
