@@ -1,5 +1,3 @@
-# react-notes-app
-Notes App implemented using React, mobx
 react-notes-app
 ==========
 
