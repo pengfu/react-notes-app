@@ -2,7 +2,6 @@
  * Created by Administrator on 2016/9/22.
  */
 import React ,{Component} from 'react'
-// import style from '../../style/styles.css'
 
 export default class extends Component{
 
