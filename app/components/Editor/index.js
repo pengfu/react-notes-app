@@ -14,7 +14,7 @@ export default class extends Component{
 
     render(){
         let {activeNote} = store
-        let activeNoteText = activeNote.text
+        let activeNoteText = activeNote.text || ''
         return(
             <div id="note-editor">
                 <textarea className="form-control" value={activeNoteText} onInput={(e) => this.editNote(e.target.value)}>

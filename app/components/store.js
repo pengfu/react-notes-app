@@ -30,7 +30,7 @@ class Store {
         function matchesEl(el) {
             return el == this.activeNote
         }
-        this.activeNote = this.notes[0]
+        this.activeNote = this.notes[0] || {}
     }
 
     @action toggleFavorite(){
